@@ -447,7 +447,7 @@ public class SingleGame extends Activity {
             ImageButton switchbtn = new ImageButton(this);
             switchbtn.setId(View.generateViewId());
             switchbtn.setLayoutParams(lp);
-            switchbtn.setBackground(curSkin[first_arr[stage][i]==0?1:0]);
+            switchbtn.setBackground(curSkin[first_arr[stage-1][i-1]==0?1:0]);
             final int[] tempArr = crustginfo[i];
             switchbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
