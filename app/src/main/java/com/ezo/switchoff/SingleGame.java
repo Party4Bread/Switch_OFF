@@ -314,12 +314,14 @@ public class SingleGame extends Activity {
             }
     };
     int[][] first_arr = {
-            //tutorial1
+            //0
             {0},
-            //t2
+            //tutorial1
             {0, 0},
-            //t3
+            //t2
             {0, 0, 0},
+            //t3
+            {0, 0, 0, 0},
             //stage1
             {0, 0, 0, 0, 0},
             //s2
@@ -371,7 +373,7 @@ public class SingleGame extends Activity {
             //s24
             {0, 0, 0, 0, 0, 1, 1},
             //s25
-            {0, 0, 0, 0, 1, 1, 1}
+            {0, 0, 0, 0, 1, 1, 1, 0}
     };
     Drawable[] curSkin;
 
@@ -447,7 +449,7 @@ public class SingleGame extends Activity {
             ImageButton switchbtn = new ImageButton(this);
             switchbtn.setId(View.generateViewId());
             switchbtn.setLayoutParams(lp);
-            switchbtn.setBackground(curSkin[first_arr[stage-1][i-1]==0?1:0]);
+            switchbtn.setBackground(curSkin[first_arr[stage][i]==0?1:0]);
             final int[] tempArr = crustginfo[i];
             switchbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
